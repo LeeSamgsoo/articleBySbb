@@ -25,7 +25,6 @@ public class Member {
     @Column
     private LocalDateTime regDate;
 
-    @Column
-    @OneToMany(mappedBy = "article", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "member", cascade = CascadeType.REMOVE)
     private List<Article> articles;
 }

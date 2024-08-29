@@ -21,7 +21,6 @@ public class Article {
     @Column(columnDefinition = "text")
     private String content;
 
-    @Column
     @ManyToOne
     private Member member;
 
