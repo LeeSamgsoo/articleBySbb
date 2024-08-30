@@ -25,6 +25,7 @@ public class MemberController {
         Member member = this.memberService.check(id, pw);
         if (member == null) {
             model.addAttribute("wrong", "wrong");
+            model.addAttribute("wrongText", "잘못된 로그인 정보입니다.");
             return "member_login";
         } else {
             model.addAttribute("member", member);

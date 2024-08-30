@@ -57,7 +57,8 @@
             padding: 10px;
             background-color: red;
             color: white;
-            border: none;
+            border: 5px;
+            border-color: black;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
@@ -78,9 +79,8 @@
             <input type="password" id="password" name="password" required>
         </div>
         <button type="submit" class="login-button">로그인</button>
-        <span class="alert alert-danger" role="alert" th:if="${wrong.equals('wrong')}" th:text="${wrong}"></span>
     </form>
+    <span class="alert alert-danger" role="alert" th:if="${wrong.equals('wrong')}" th:text="${wrongText}"></span>
 </div>
-
 </body>
 </html>
