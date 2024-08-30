@@ -52,6 +52,16 @@
         .login-button:hover {
             background-color: #0056b3;
         }
+        .alert {
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -68,6 +78,7 @@
             <input type="password" id="password" name="password" required>
         </div>
         <button type="submit" class="login-button">로그인</button>
+        <span class="alert alert-danger" role="alert" th:if="${wrong.equals('wrong')}" th:text="${wrong}"></span>
     </form>
 </div>
 

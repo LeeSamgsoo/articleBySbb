@@ -11,6 +11,7 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     public Member check(String userId, String password) {
-        return this.memberRepository.findByUserIdAndPassword(userId, password);
+        Optional<Member> optionalMember = this.memberRepository.findByUserIdAndPassword(userId, password);
+        return optionalMember.orElse(null);
     }
 }
