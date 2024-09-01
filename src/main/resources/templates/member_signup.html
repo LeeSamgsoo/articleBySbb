@@ -52,6 +52,17 @@
         .signup-button:hover {
             background-color: #218838;
         }
+        .login-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -74,7 +85,9 @@
         </div>
         <button type="submit" class="signup-button">회원가입</button>
     </form>
+    <a th:href="@{/member/login}" class="login-link">이미 계정이 있으신가요? 로그인</a>
 </div>
+
 
 </body>
 </html>

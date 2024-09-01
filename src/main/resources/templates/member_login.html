@@ -63,6 +63,17 @@
             cursor: pointer;
             font-size: 16px;
         }
+        .signup-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .signup-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -81,6 +92,7 @@
         </div>
         <button type="submit" class="login-button">로그인</button>
     </form>
+    <a th:href="@{/member/signup}" class="signup-link">회원가입</a>
 </div>
 </body>
 </html>
